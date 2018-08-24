@@ -68,8 +68,8 @@ export default class ScalableImage extends React.Component {
         if (this.mounted) {
             this.setState({
                 size: {
-                    width: Math.ceil(sourceWidth * ratio),
-                    height: Math.ceil(sourceHeight * ratio)
+                    width: Math.round(sourceWidth * ratio),
+                    height: Math.round(sourceHeight * ratio)
                 }
             }, () => this.props.onSize(this.state.size));
         }
